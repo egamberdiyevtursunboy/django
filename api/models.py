@@ -16,4 +16,4 @@ class Feedback(models.Model):
     body =  models.CharField(max_length=120, null=True, blank=True)
 
     def __str__(self):
-        return str(self.name)
+        return str(self.body)

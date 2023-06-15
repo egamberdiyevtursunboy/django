@@ -7,8 +7,11 @@ from states import FeedbackState
 from aiogram.dispatcher.filters import Text
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
+from environs import Env
+env = Env()
+env.read_env()
 
-API_TOKEN = '134566483:AAHH_YyLIGh7S-LlZ77Tt1bW5WODJl01t4A'
+API_TOKEN = env.str("API_TOKEN")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
